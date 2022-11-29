@@ -23,12 +23,11 @@ Although you can use them, for a more unique website, replace these images with 
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <!-- Custom Fonts from Google -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body style="font-family:arial, sans-serif">
     <!-- Navigation -->
     <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -41,8 +40,8 @@ Although you can use them, for a more unique website, replace these images with 
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                	<span class="glyphicon glyphicon-fire"></span> 
-                	Cloud Computing Group 9
+                    <span class="glyphicon glyphicon-fire"></span> 
+                    Cloud Computing Group 9
                 </a>
             </div>
             <!-- Navbar links -->
@@ -51,39 +50,33 @@ Although you can use them, for a more unique website, replace these images with 
                     <li class="active">
                         <a href="/">Home</a>
                     </li>
-					<li class="dropdown">
-						<a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="about-us">
-							<li><a href="/brazil">Brazil</a></li>
+                    <li class="dropdown">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Countries <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="/brazil">Brazil</a></li>
                             <li><a href="/china">China</a></li>
-                            <li><a href="/jordan">Jordan</a></li>
                             <li><a href="/mexico">Mexico</a></li>
                             <li><a href="/india">India</a></li>
                             <li><a href="/italy">Italy</a></li>
+                            <li><a href="/jordan">Jordan</a></li>
                             <li><a href="/peru">Peru</a></li>
-						</ul>
-					</li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
 
-	<!-- Header -->
+    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>COVID-19 Statistics/Information</h1>
-                <p>Our group created this project to show different live COVID-19 statistics depending on the country. 
-                    Stats pulled from Google BigQuery COVID-19 data</p>
-                <a href="/case_study" class="btn btn-primary btn-lg">View Case Study</a>
-                <a href="/code_snippet" class="btn btn-primary btn-lg">View Model Code</a>
+                <script src="https://gist.github.com/jesus-p/6ef663aab760ab4e7ccc26ea9c956f20.js"></script>
             </div>
         </div>
-    </header>
-
+    </header>    
 	<!-- Footer -->
     <footer class="page-footer">
-    
     	<!-- Contact Us -->
         <div class="contact">
         	<div class="container">
@@ -91,27 +84,21 @@ Although you can use them, for a more unique website, replace these images with 
 				<p><span class="glyphicon glyphicon-envelope"></span>  jesus.perez2@my.utsa.edu </p>
         	</div>
         </div>
-        	
         <!-- Copyright etc -->
         <div class="small-print">
         	<div class="container">
         		<p>Copyright &copy; Cloud Computing Group 9</p>
         	</div>
         </div>
-        
     </footer>
 
     <!-- jQuery -->
     <script src="{{ url_for('static', filename='jquery-1.11.3.min.js') }}"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
-
     <!-- Plugin JavaScript -->
     <script src="{{ url_for('static', filename='jquery.easing.min.js') }}"></script>
-    
     <!-- Custom Javascript -->
     <script src="{{ url_for('static', filename='custom.js') }}"></script>
-
 </body>
 </html>

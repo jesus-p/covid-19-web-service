@@ -3,8 +3,14 @@
 <body style="font-family:arial, sans-serif">
     <h1>{{header}}</h1>
     <h6><a href="/">Return to Homepage</a></h6>
-    <div id="chart" class="chart"></div>
     <div>{{description}}</div>
+    <div id="chart" class="chart"></div>
+    <div class="text-center">
+        <img src="/static/{{header}}-neural.png" class="rounded">
+    </div>
+    <div class="text-center">
+        <img src="/static/{{header}}-prediction.png" class="rounded">
+    </div>
 </body>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript">
