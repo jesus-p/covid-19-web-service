@@ -7,12 +7,39 @@ import plotly.express as px
 import numpy as np
 import time
 import db_dtypes
+from google.cloud import datastore
+import datetime
 
+datastore_client = datastore.Client()
 app = Flask(__name__)
 
+def store_time(dt):
+    entity = datastore.Entity(key=datastore_client.key('visit'))
+    entity.update({
+        'timestamp': dt
+    })
+
+    datastore_client.put(entity)
+
+
+def fetch_times(limit):
+    query = datastore_client.query(kind='visit')
+    query.order = ['-timestamp']
+
+    times = query.fetch(limit=limit)
+
+    return times
+
 @app.route('/')
-def index():
-    return render_template('index.html')
+def root():
+    # Store the current access time in Datastore.
+    store_time(datetime.datetime.now(tz=datetime.timezone.utc))
+
+    # Fetch the most recent 10 access times from Datastore.
+    times = fetch_times(10)
+
+    return render_template(
+        'index.html', times=times)
 
 @app.route('/brazil')
 def brazil():
