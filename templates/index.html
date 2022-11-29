@@ -16,6 +16,25 @@ Although you can use them, for a more unique website, replace these images with 
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="{{ url_for('static', filename='custom.css') }}" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+
+    <script>
+        var config = {
+            apiKey: "AIzaSyCSUU5NO5PenU2P_v6f-T_3P6eLyrey0VY",
+            authDomain: "covid-19-web-service.firebaseapp.com",
+            databaseURL: "https://covid-19-web-service-default-rtdb.firebaseio.com",
+            projectId: "covid-19-web-service",
+            storageBucket: "covid-19-web-service.appspot.com",
+            messagingSenderId: "400277424448",
+            appId: "1:400277424448:web:e005150eff8b21d48d52a5",
+            measurementId: "G-ECH3QYEWTL"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,13 +103,10 @@ Although you can use them, for a more unique website, replace these images with 
 	<!-- Footer -->
     <footer class="page-footer">
     
-    	<!-- Contact Us -->
-        <div class="contact">
-        	<div class="container">
-				<h2 class="section-heading">Contact Info:</h2>
-				<p><span class="glyphicon glyphicon-envelope"></span>  jesus.perez2@my.utsa.edu </p>
-        	</div>
-        </div>
+    <h2>Last 10 visits</h2>
+    {% for time in times %}
+    <p>{{ time['timestamp'] }}</p>
+    {% endfor %}
         	
         <!-- Copyright etc -->
         <div class="small-print">
