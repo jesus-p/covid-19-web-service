@@ -1,10 +1,10 @@
 # COVID-19 Web Application
 Our group created this Google App Engine to display live COVID-19 stats for several countries, and graphing those statistics live as requested.
-<br />
+<br /> <br />
 The group created a COVID-19 Death Rate Model which is displayed for each country in our case study and demo.
-<br />
+<br /> <br />
 Johns Hopkins maintains a dataset of COVID-19 confirmed cases and have made it free in the form of a CSV file for academic and research use. In an effort to make the data easier to query and analyze, Google Cloud is making it publicly available in BigQuery. BigQuery is used on our application to fetch the latest data.
-<br />
+<br /> <br />
 Google Firebase is also implemented in our project as a database back-end used to store meta-data such as the number of times the website is visited.
 
 ## Installation
